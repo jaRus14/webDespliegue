@@ -1,6 +1,4 @@
-
-
-<?php ob_start()?>
+<?php include 'cabecera.inc'; ?>
 
 <body style="background-color:#ccffdd;">
 
@@ -27,10 +25,7 @@
     </div>
 
 </body>
-
-<?php $contenido = ob_get_clean()?>
-<?php include 'layout.php' ?>
-
+<?php include 'pie.inc'; ?> 
 
 
         

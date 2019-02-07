@@ -1,5 +1,4 @@
-<?php ob_start()?>
-
+<?php include 'cabecera.inc'; ?>
 
 <h1>LENGUAJES DE PROGRAMACION</h1>
 <p class="text-justify">Un lenguaje de programación es un lenguaje formal que especifica 
@@ -49,6 +48,4 @@
   </a>
 </div>
 
-
-<?php $contenido = ob_get_clean()?>
-<?php include 'layout.php' ?>
+<?php include 'pie.inc'; ?> 

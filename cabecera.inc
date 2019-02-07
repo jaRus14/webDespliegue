@@ -28,7 +28,7 @@
 
    <!--Barra de navegacion-->
    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-<a class="navbar-brand btn btn-dark" href="inicio.php" style="color:white">Home</a>
+<a class="navbar-brand btn btn-dark" href="index.php" style="color:white">Home</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -48,28 +48,3 @@
     </form>
   </div>
 </nav>
-
-<!--Contenido pagina-->
-
-<div id="contenido">
-    <?php echo $contenido ?>
-</div>
-
-<!-- Footer -->
-
-<footer class="mt-4">     
-         <div id="redes"> 
-                <a href="https://www.facebook.com"><img src="imagenes/facebook.png" width="50px"/></a>                 
-                <a href="https://twitter.com/?lang=es"><img src="imagenes/twiter.png" width="50px"/></a>   
-                       
-                <a href="https://www.instagram.com/?hl=es"><img src="imagenes/instagram.png" width="50px"/></a>
-        </div>
-
-        <div class="footer-copyright text-center py-3">
-          <a href="https://mdbootstrap.com/education/bootstrap/"> Despliegue.com</a>
-          <br>
-          <p class="copy text-center py-3">Derechos reservados por copyrigth - 2019 © </p>
-        </div>
-</footer>
-
-</div>
