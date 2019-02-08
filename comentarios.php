@@ -8,15 +8,26 @@
     <div class="actionBox">
         <ul class="commentList">
             <?php
-                //preguntar si se ha pulsado el boton annadir ...
                 $conexion = mysqli_connect("localhost","root","","comentarios");
-                //query para buscar comentarios
+
+                if(isset($_POST['submit']))  {
+                    $nombre = $_POST['name'];
+                    $comentario = $_POST['comentario'];
+                    $hora = date('H:i d/m/Y');
+
+                    //preparamos stmt
+                    $stmt = $conexion->prepare("INSERT INTO coment(nombre, comentario, fecha_hora) VALUES (?, ?, ?)");
+                    $stmt->bind_param("sss", $nombre, $comentario, $hora);
+                    $stmt->execute();
+                    $stmt->close();
+                }
+
                 if($resultado = $conexion->query("SELECT * from coment")) {
                     if (mysqli_num_rows($resultado) > 0) {
                         while($row = mysqli_fetch_assoc($resultado)) {
                             echo '<li>';
                                 echo '<div class="commentText">';
-                                    echo "<p class=''>".$row['nombre']."</p><p>".$row['comentario']."</p><span class='date sub-text'>".$row['fecha_hora']."</span>";
+                                    echo "<p class='nombre'>".$row['nombre']."</p><p>".$row['comentario']."</p><span class='date sub-text'>".$row['fecha_hora']."</span>";
                                 echo '</div>';
                             echo '</li>';
                         }
@@ -26,44 +37,12 @@
                 }
                 mysqli_close($conexion);
             ?>
-            <li>
-                <div class="commentText">
-                    <p class="">Hello this is a test comment.</p> <span class="date sub-text">on March 5th, 2014</span>
-                </div>
-            </li>
-            <li>
-                <div class="commentText">
-                    <p class="">Hello this is a test comment.</p> <span class="date sub-text">on March 5th, 2014</span>
-                </div>
-            </li>
-            <li>
-                <div class="commentText">
-                    <p class="">Hello this is a test comment.</p> <span class="date sub-text">on March 5th, 2014</span>
-                </div>
-            </li>
-            <li>
-                <div class="commentText">
-                    <p class="">Hello this is a test comment.</p> <span class="date sub-text">on March 5th, 2014</span>
-                </div>
-            </li>
-            <li>
-                <div class="commentText">
-                    <p class="">Hello this is a test comment.</p> <span class="date sub-text">on March 5th, 2014</span>
-                </div>
-            </li>
-            <li>
-                <div class="commentText">
-                    <p class="">Hello this is a test comment.</p> <span class="date sub-text">on March 5th, 2014</span>
-                </div>
-            </li>
         </ul>
-        <form class="form-inline" role="form">
+        <form class="form-inline" role="form" action="#" method="post">
             <div class="form-group">
-                <form action="#" method="POST"> 
-                    <input type="text" class="form-control" id="nombre" placeHolder="Nombre (requerido)" required>
-                    <textarea class="form-control" maxlength="128" placeHolder="Escriba aquí su comentario máximo 128 caracteres"></textarea>    
-                    <input type="submit" class="btn btn-dark" id="annadir" value="Añadir">
-                </form>
+                <input type="text" class="form-control" name="name" placeHolder="Nombre (requerido)" required>
+                <textarea class="form-control" maxlength="128" name="comentario" placeHolder="Escriba aquí su comentario máximo 128 caracteres"></textarea>
+                <input type="submit" class="btn btn-dark" name="submit" value="Añadir">
             </div>
         </form>
     </div>

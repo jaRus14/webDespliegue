@@ -12,10 +12,13 @@
   margin:0;
   display:inline-block;
 }
-
+.nombre {
+    font-weight: bold;
+}
 .commentBox {
     padding:10px;
     border-top:1px dotted #bbb;
+    background-color:#fdfdfd;
 }
 .commentBox .form-group:first-child, .actionBox .form-group:first-child {
     width:80%;
@@ -34,13 +37,16 @@
     list-style:none;
     max-height:200px;
     overflow:auto;
+    background-color:#fdfdfd;
 }
 .commentList li {
     margin:0;
     margin-top:10px;
+    background-color:#fdfdfd;
 }
 .commentList li > div {
     display:table-cell;
+    background-color:#fdfdfd;
 }
 .commenterImage {
     width:30px;
@@ -59,8 +65,10 @@
     color:#aaa;
     font-family:verdana;
     font-size:11px;
+    background-color:#fdfdfd;
 }
 .actionBox {
+    background-color:#fdfdfd;
     border-top:1px dotted #bbb;
     padding:10px;
 }
