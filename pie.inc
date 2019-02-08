@@ -1,4 +1,4 @@
-
+<?php include('comentarios.php'); ?>
 <footer class="mt-4">     
          <div id="redes"> 
                 <a href="https://www.facebook.com"><img src="imagenes/facebook.png" width="50px"/></a>                 
@@ -15,5 +15,6 @@
 </footer>
 
 </div>
+  
 </body>
 </html>
