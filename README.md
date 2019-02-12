@@ -5,7 +5,7 @@
 A continuación hay unos enlaces para poder visualizar online los wireframe de la página con un diseño 
 
 Pagina Principal
-[https://balsamiq.cloud/sefe6nc/pnmcvvl/r2737](https://balsamiq.cloud/sefe6nc/padsjzt/rD31C)
+[https://balsamiq.cloud/sefe6nc/pnmcvvl/r2737](https://balsamiq.cloud/sefe6nc/pnmcvvl/r2737)
 
 Paginas Secundarias
 [https://balsamiq.cloud/sefe6nc/padsjzt/rD31C](https://balsamiq.cloud/sefe6nc/padsjzt/rD31C)
